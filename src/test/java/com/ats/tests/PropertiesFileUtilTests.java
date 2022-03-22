@@ -36,5 +36,16 @@ public class PropertiesFileUtilTests {
 		CustomAssertion.isEqual("india", val, "Property key env");
 	}
 	
+	@Test(priority = 3)
+	public void test_firstname () {
+		
+		String fname = propertiesFileUtil.getValue("firstname");
+		
+		System.out.println ("Fristname value :" + fname) ;
+		String firstname = "Jiten";
+		
+		CustomAssertion.isEqual(fname, firstname, "First Name verification");
+	}
+	
 
 }

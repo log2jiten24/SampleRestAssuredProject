@@ -24,7 +24,9 @@ public class ExcelUtilTests {
 	
 	@BeforeClass
 	public void intialize() {
-		String excelFilePath = System.getProperty("user.dir")+"/src/test/resources/testdata.xlsx";
+		//String excelFilePath = System.getProperty("user.dir")+"/src/test/resources/testdata.xlsx";
+		
+		String excelFilePath = "./src/test/resources/testData.xlsx";
 		logger.info("Excel file path : "+excelFilePath);
 		excelUtil = new ExcelUtil(excelFilePath);
 	}
@@ -104,6 +106,8 @@ public class ExcelUtilTests {
 		Boolean isSheetRemoved = excelUtil.removeSheet(sheetName);
 		CustomAssertion.isEqual(true, isSheetRemoved, "Remove sheet");
 	}
+	
+	
 	
 	
 }
